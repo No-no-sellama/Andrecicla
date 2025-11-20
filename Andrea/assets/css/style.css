@@ -131,3 +131,7 @@ padding-right: 5%;
     text-align: center;
   }
 }
+a{
+  text-decoration: none;
+  color: white;
+}
