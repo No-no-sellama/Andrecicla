@@ -116,3 +116,115 @@ a{
   text-decoration: none;
   color: white;
 }
+/* Estilos para el contenedor principal */
+.acerca-de {
+    display: flex;
+    /* Centra los elementos verticalmente */
+    align-items: center;
+    /* Añade padding alrededor de la sección */
+    padding: 60px 40px;
+    /* Distribuye el espacio entre el texto y la imagen */
+    justify-content: center;
+    /* Si tienes la imagen de fondo, la puedes aplicar aquí */
+    background-color: #f5f4f0; /* Color base si la imagen de fondo no carga */
+    background-image: url('ruta/a/tu/fondo.png'); /* La textura de papel */
+    background-size: cover;
+    min-height: 400px; /* Altura mínima para que el fondo se vea bien */
+}
+
+/* Contenedor del texto para manejar el ancho */
+.acerca-de__contenido {
+    /* Ocupa más espacio que la imagen */
+    flex-basis: 55%;
+    max-width: 600px;
+    margin-right: 40px; /* Espacio entre el texto y la imagen */
+}
+
+/* Estilos de los textos */
+.acerca-de__titulo {
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+}
+
+.acerca-de__descripcion {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4b4b4b;
+    margin-bottom: 15px;
+}
+
+/* Estilos de la imagen y su marco */
+.acerca-de__imagen-contenedor {
+    /* La imagen en sí tiene un tamaño fijo */
+    width: 250px;
+    height: 280px;
+    /* Crea el borde morado alrededor de la imagen */
+    border: 5px solid #a37ec7; /* Color morado suave */
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.acerca-de__imagen {
+    width: 100%;
+    height: 100%;
+    /* Asegura que la imagen cubra el contenedor */
+    object-fit: cover;
+    /* Le da un borde interior blanco */
+    border: 2px solid white;
+}
+
+/* Estilos del botón */
+.acerca-de__boton {
+    /* Dimensiones y padding */
+    padding: 15px 35px;
+    margin-top: 25px;
+    /* Apariencia */
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4b4b4b;
+    /* Colores del botón */
+    background-color: #e0d0eb; /* Fondo lila claro */
+    /* Borde lila más oscuro */
+    border: 1px solid #a37ec7;
+    /* Bordes redondeados sutiles */
+    border-radius: 5px;
+    /* Sombra para darle profundidad, como se ve en la imagen */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* El borde exterior sutil visto en tu imagen */
+    outline: 5px solid rgba(163, 126, 199, 0.3); /* Un halo morado suave */
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .acerca-de {
+        /* Pone los elementos en una columna */
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .acerca-de__contenido {
+        /* Ocupa el 100% del ancho */
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 30px; /* Espacio entre el texto y la imagen */
+        text-align: center;
+    }
+
+    .acerca-de__titulo {
+        font-size: 2rem;
+    }
+
+    .acerca-de__imagen-contenedor {
+        width: 200px;
+        height: 225px;
+    }
+    
+    .acerca-de__boton {
+        width: 100%; /* El botón ocupa todo el ancho en móvil */
+        max-width: 300px;
+    }
+}
