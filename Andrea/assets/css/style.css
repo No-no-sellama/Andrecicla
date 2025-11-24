@@ -71,28 +71,10 @@ padding-right: 5%;
   gap: 60px;
 }
 
-/* Logo */
-.footer-logo {
-  text-align: center;
-  color: #e8d4eb;
-}
+/* Logo footer */
 
-.footer-logo img {
-  width: 160px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.footer-logo h2 {
-  font-size: 42px;
-  margin: 0;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.footer-logo p {
-  margin: 0;
-  font-size: 18px;
+.logofooter {
+  width: 500px;
 }
 
 /* Secciones */
@@ -134,7 +116,4 @@ padding-right: 5%;
 a{
   text-decoration: none;
   color: white;
-}
-.logofooter {
-  width: 500px;
 }
