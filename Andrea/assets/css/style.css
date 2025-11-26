@@ -8,7 +8,7 @@ body {
   background-color: #ffffff; 
   font-family: Arial, sans-serif;
 }
-
+/*****Estilos pagina de inicio******/
 .navbar {
   width: 100%;
   background-color: rgba(88, 0, 153, 0.42); 
@@ -166,7 +166,177 @@ body {
   border-radius: 8px;
 }
 
-/* Responsive */
+/******* Estilos pagina single-productos******/
+.price {
+    color: #DD6B4F;
+}
+.btn-alcarrito {
+    background: #E6D9EE;
+    color: #75427F;
+    padding: 10px 70px;
+    border: none;
+    border-radius: 11px;
+    box-shadow: #75427F;
+}
+.containerDetalle {
+    height: 600px;
+    max-width: 900px;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.titulo-single-producto {
+    margin-bottom: 40px;
+}
+
+.containerhijodetalle {
+    display: flex;
+}
+
+.hijodetalle2 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenidoDetalle {
+    border: solid 2px #75427F;
+    padding: 50px;
+    border-radius: 1%;
+    background-color: #fff;
+}
+
+.textoDetalle {
+    display: flex;
+    flex-direction: column;
+}
+
+.purple-divider {
+    border: solid 1px #75427F;
+    height: 2px;
+    margin: auto;
+    width: 60%;
+    background-color: #75427F;
+    border-radius: 50px;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* CARD */
+.card-item {
+    padding: 5px;
+}
+.hijodetalle2{
+    border: solid 2px;
+    color: #75427F;
+    border-radius: 11px;
+}
+.card-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.card-link:hover .card-content {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(117, 66, 127, 0.7);
+}
+
+.card-content {
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 11px;
+    padding-bottom: 15px;
+}
+
+.card-tittle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    margin-top: 10px;
+}
+
+.parrafo-single {
+    font-size: 1rem;
+    color: #333;
+}
+
+.owl-carousel {
+    position: relative !important;
+}
+
+.owl-stage-outer {
+    overflow: hidden;
+}
+
+.owl-stage {
+    display: flex;
+    align-items: stretch;
+}
+
+.owl-item {
+    display: flex;
+    padding-right: 20px;
+}
+
+
+/* Contenedor de botones */
+.owl-nav {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    pointer-events: none; /* permite clic "solo" en las flechas */
+    z-index: 100;
+}
+
+/* Botones izquierda/derecha */
+.owl-nav button {
+    pointer-events: auto;
+    background-color: #E6D9EE !important;
+    color: #75427F !important;
+    border: none !important;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px !important;
+    font-size: 32px !important;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Flecha izquierda */
+.owl-nav .owl-prev {
+    left: -70px;
+}
+
+/* Flecha derecha */
+.owl-nav .owl-next {
+    right: -70px;
+}
+
+.owl-nav button span {
+    font-size: 38px !important;
+    line-height: 1;
+}
+
+.owl-nav.disabled {
+    display: block !important;
+}
+
+
+
+/********* Responsive de inicio *******/
 @media (max-width: 900px) {
   .footer-container {
     flex-direction: column;
@@ -344,4 +514,65 @@ text-align: center;
 hr{
   background-color: #75427F;
   height: 3px;
+}
+
+/******** responsive de single-productos******/
+/* responsive de tablet  */
+@media (max-width: 992px) {
+    .contenidoDetalle {
+        padding: 30px;
+    }
+    .containerDetalle {
+        margin-bottom: 400px;
+    }
+
+    .owl-nav .owl-prev { left: -40px; }
+    .owl-nav .owl-next { right: -40px; }
+}
+
+/* responsive de movil */
+@media (max-width: 700px) {
+
+    .containerDetalle {
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .containerhijodetalle {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .contenidoDetalle {
+        padding: 20px;
+    }
+
+    .owl-item {
+        padding-right: 10px;
+    }
+
+    .card-link {
+        padding: 15px;
+    }
+
+    .owl-nav .owl-prev { left: -20px; }
+    .owl-nav .owl-next { right: -20px; }
+}
+
+/* responsive chiquito */
+@media (max-width: 400px) {
+
+    .owl-nav button {
+        width: 45px;
+        height: 45px;
+        font-size: 22px !important;
+    }
+
+    .owl-nav button span {
+        font-size: 26px !important;
+    }
+
+    .owl-nav .owl-prev { left: -10px; }
+    .owl-nav .owl-next { right: -10px; }
 }
